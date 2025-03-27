@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Portal - XML словари</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.0/dist/cirrus.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body class="bg-gradient">
+    <!-- Навигация -->
+    <header class="header header-transparent header-animated u-unselectable">
+        <div class="header-brand">
+            <div class="nav-item no-hover">
+                <a href="#">
+                    <h6 class="title"><i class="fas fa-code"></i> XML Portal</h6>
+                </a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left">
+                <a href="index.html" class="nav-item active">Главная</a>
+                <a href="basics.html" class="nav-item">Основы XML</a>
+                <a href="dictionaries.html" class="nav-item">XML словари</a>
+                <a href="examples.html" class="nav-item">Примеры</a>
+                <a href="video-tutorials.html" class="nav-item">Видеоуроки</a>
+                <a href="contact.html" class="nav-item">Контакты</a>
+            </div>
+        </div>
+    </header>
+ 
+    <section class="section">
+        <div class="container">
+            <h1 class="title">XML словари</h1>
+            <div class="divider"></div>
+            
+            <div class="content">
+                <h2>Что такое XML словарь?</h2>
+                <p>XML словарь (или XML схема) определяет структуру и содержание XML документа. Он задает правила, которым должен соответствовать XML документ.</p>
+                
+                <h3>Типы XML словарей:</h3>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-primary">
+                                <h4 class="card-title text-white">DTD</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Document Type Definition - самый старый способ определения структуры XML.</p>
+                                <pre><code class="language-xml">&lt;!ELEMENT note (to, from, body)&gt;
+&lt;!ELEMENT to (#PCDATA)&gt;
+&lt;!ELEMENT from (#PCDATA)&gt;
+&lt;!ELEMENT body (#PCDATA)&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-info">
+                                <h4 class="card-title text-white">XSD</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>XML Schema Definition - более мощная альтернатива DTD.</p>
+                                <pre><code class="language-xml">&lt;xs:element name="note"&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element name="to" type="xs:string"/&gt;
+      &lt;xs:element name="from" type="xs:string"/&gt;
+      &lt;xs:element name="body" type="xs:string"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-success">
+                                <h4 class="card-title text-white">RelaxNG</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>Более простой и удобный для чтения формат схемы.</p>
+                                <pre><code class="language-xml">&lt;element name="note"&gt;
+  &lt;element name="to"&gt;&lt;text/&gt;&lt;/element&gt;
+  &lt;element name="from"&gt;&lt;text/&gt;&lt;/element&gt;
+  &lt;element name="body"&gt;&lt;text/&gt;&lt;/element&gt;
+&lt;/element&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Популярные XML словари</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Словарь</th>
+                                <th>Описание</th>
+                                <th>Применение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XHTML</td>
+                                <td>XML-версия HTML</td>
+                                <td>Веб-страницы</td>
+                            </tr>
+                            <tr>
+                                <td>SVG</td>
+                                <td>Масштабируемая векторная графика</td>
+                                <td>Графика в вебе</td>
+                            </tr>
+                            <tr>
+                                <td>MathML</td>
+                                <td>Математическая разметка</td>
+                                <td>Научные документы</td>
+                            </tr>
+                            <tr>
+                                <td>RSS</td>
+                                <td>Really Simple Syndication</td>
+                                <td>Ленты новостей</td>
+                            </tr>
+                            <tr>
+                                <td>TEI</td>
+                                <td>Text Encoding Initiative</td>
+                                <td>Гуманитарные науки</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h2>Создание собственного XML словаря</h2>
+                <p>Чтобы создать собственный XML словарь, выполните следующие шаги:</p>
+                <ol>
+                    <li>Определите структуру данных, которые вы хотите представить</li>
+                    <li>Создайте элементы и атрибуты, которые будут описывать ваши данные</li>
+                    <li>Определите отношения между элементами (вложенность, последовательность)</li>
+                    <li>Укажите типы данных для элементов и атрибутов</li>
+                    <li>Проверьте вашу схему на реальных данных</li>
+                </ol>
+                
+                <div class="card bg-gray-200">
+                    <div class="card-body">
+                        <h4 class="card-title">Пример создания простого словаря</h4>
+                        <p>Допустим, мы хотим создать словарь для хранения информации о книгах:</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <h5>XSD схема (books.xsd)</h5>
+                                <pre><code class="language-xml">&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="library"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="book" maxOccurs="unbounded"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="title" type="xs:string"/&gt;
+              &lt;xs:element name="author" type="xs:string"/&gt;
+              &lt;xs:element name="year" type="xs:integer"/&gt;
+              &lt;xs:element name="price" type="xs:decimal"/&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:attribute name="id" type="xs:string" use="required"/&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+                            </div>
+                            <div class="col-6">
+                                <h5>XML документ (library.xml)</h5>
+                                <pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="books.xsd"&gt;
+  &lt;book id="bk001"&gt;
+    &lt;title&gt;XML для начинающих&lt;/title&gt;
+    &lt;author&gt;Иван Петров&lt;/author&gt;
+    &lt;year&gt;2022&lt;/year&gt;
+    &lt;price&gt;29.99&lt;/price&gt;
+  &lt;/book&gt;
+  &lt;book id="bk002"&gt;
+    &lt;title&gt;Продвинутый XML&lt;/title&gt;
+    &lt;author&gt;Мария Сидорова&lt;/author&gt;
+    &lt;year&gt;2023&lt;/year&gt;
+    &lt;price&gt;39.99&lt;/price&gt;
+  &lt;/book&gt;
+&lt;/library&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="title"><i class="fas fa-code"></i> XML Portal</h5>
+                    <p>Ресурс по изучению XML технологий и словарей</p>
+                </div>
+                <div class="col-6 u-text-right">
+                    <p>© 2025 XML и XML-словари. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>
+ 
+ 

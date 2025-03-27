@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Portal - Главная</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.0/dist/cirrus.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body class="bg-gradient">
+    <!-- Навигация -->
+    <header class="header header-transparent header-animated u-unselectable">
+        <div class="header-brand">
+            <div class="nav-item no-hover">
+                <a href="#">
+                    <h6 class="title"><i class="fas fa-code"></i> XML Portal</h6>
+                </a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left">
+                <a href="index.html" class="nav-item active">Главная</a>
+                <a href="basics.html" class="nav-item">Основы XML</a>
+                <a href="dictionaries.html" class="nav-item">XML словари</a>
+                <a href="examples.html" class="nav-item">Примеры</a>
+                <a href="video-tutorials.html" class="nav-item">Видеоуроки</a>
+                <a href="contact.html" class="nav-item">Контакты</a>
+            </div>
+        </div>
+    </header>
+ 
+    <!-- Герой секция -->
+    <section class="hero fullscreen hero-img">
+        <div class="hero-body">
+            <div class="content u-text-center">
+                <img src="images/xml-logo.png" alt="XML Logo" class="logo-img">
+                <h1 class="title">Все о XML и XML словарях</h1>
+                <h3 class="subtitle">Изучайте, создавайте и применяйте XML технологии</h3>
+                <div class="btn-group">
+                    <a href="basics.html" class="btn-primary btn-lg btn-animated">Начать изучение</a>
+                    <a href="examples.html" class="btn-info btn-lg btn-animated">Примеры кода</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Основные разделы -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title u-text-center">Основные разделы</h2>
+            <div class="divider"></div>
+            
+            <div class="row mt-5">
+                <div class="col-3">
+                    <a href="basics.html" class="card card-hover card-link">
+                        <div class="card-header bg-primary">
+                            <i class="fas fa-book fa-2x text-white"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title u-text-center">Основы XML</h5>
+                            <p class="card-subtitle">Синтаксис, структура, валидация</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-3">
+                    <a href="dictionaries.html" class="card card-hover card-link">
+                        <div class="card-header bg-info">
+                            <i class="fas fa-book-open fa-2x text-white"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title u-text-center">XML словари</h5>
+                            <p class="card-subtitle">Стандартные словари и создание своих</p>
+                        </div>
+                    </a>
+                </div>
+                 
+                <div class="col-3">
+                    <a href="examples.html" class="card card-hover card-link">
+                        <div class="card-header bg-success">
+                            <i class="fas fa-code fa-2x text-white"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title u-text-center">Примеры</h5>
+                            <p class="card-subtitle">Готовые примеры XML документов</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Быстрый старт -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="title">Быстрый старт с XML</h2>
+                    <div class="content">
+                        <p>XML (eXtensible Markup Language) - это язык разметки, предназначенный для хранения и передачи структурированных данных.</p>
+                        <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;book&gt;
+  &lt;title&gt;XML для начинающих&lt;/title&gt;
+  &lt;author&gt;Иван Иванов&lt;/author&gt;
+  &lt;year&gt;2023&lt;/year&gt;
+&lt;/book&gt;</code></pre>
+                        <a href="basics.html" class="btn-primary">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="images/xml-structure.png" alt="XML структура" class="img-stretch rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="title"><i class="fas fa-code"></i> XML Portal</h5>
+                    <p>Ресурс по изучению XML технологий и словарей</p>
+                </div>
+                <div class="col-6 u-text-right">
+                    <p>© 2025 XML и XML-словари. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>

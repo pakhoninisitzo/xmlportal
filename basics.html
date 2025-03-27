@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Portal - Основы XML</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.0/dist/cirrus.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body class="bg-gradient">
+    <header class="header header-transparent header-animated u-unselectable">
+        <div class="header-brand">
+            <div class="nav-item no-hover">
+                <a href="#">
+                    <h6 class="title"><i class="fas fa-code"></i> XML Portal</h6>
+                </a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left">
+                <a href="index.html" class="nav-item active">Главная</a>
+                <a href="basics.html" class="nav-item">Основы XML</a>
+                <a href="dictionaries.html" class="nav-item">XML словари</a>
+                <a href="examples.html" class="nav-item">Примеры</a>
+                <a href="video-tutorials.html" class="nav-item">Видеоуроки</a>
+                <a href="contact.html" class="nav-item">Контакты</a>
+            </div>
+        </div>
+    </header>
+ 
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Основы XML</h1>
+            <div class="divider"></div>
+            
+            <div class="content">
+                <h2>Что такое XML?</h2>
+                <p>XML (eXtensible Markup Language) - это язык разметки, который определяет набор правил для кодирования документов в формате, который является одновременно удобочитаемым и машиночитаемым.</p>
+                
+                <h3>Основные особенности XML:</h3>
+                <ul>
+                    <li>XML предназначен для хранения и передачи данных</li>
+                    <li>XML является расширяемым - вы можете создавать свои собственные теги</li>
+                    <li>XML не зависит от платформы и может использоваться в различных системах</li>
+                    <li>XML поддерживает Unicode, что позволяет использовать различные языки</li>
+                </ul>
+                
+                <h2>Структура XML документа</h2>
+                <p>Каждый XML документ должен содержать:</p>
+                <ol>
+                    <li>Объявление XML (необязательно, но рекомендуется)</li>
+                    <li>Корневой элемент, который содержит все остальные элементы</li>
+                    <li>Правильно вложенные элементы</li>
+                </ol>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Пример правильного XML:</h3>
+                        <pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;catalog&gt;
+  &lt;book id="bk101"&gt;
+    &lt;author&gt;Гамбардов&lt;/author&gt;
+    &lt;title&gt;XML в действии&lt;/title&gt;
+    &lt;price&gt;29.99&lt;/price&gt;
+  &lt;/book&gt;
+&lt;/catalog&gt;</code></pre>
+                    </div>
+                    <div class="col-6">
+                        <h3>Пример неправильного XML:</h3>
+                        <pre><code class="language-xml">&lt;?xml version="1.0"?&gt;
+&lt;catalog&gt;
+  &lt;book id="bk101"&gt;
+    &lt;author&gt;Гамбардов
+      &lt;title&gt;XML в действии&lt;/author&gt;
+    &lt;/title&gt;
+    &lt;price&gt;29.99
+&lt;/catalog&gt;</code></pre>
+                        <p class="text-error">Ошибки: незакрытые теги, неправильная вложенность</p>
+                    </div>
+                </div>
+                
+                <h2>XML пространства имен</h2>
+                <p>Пространства имен XML используются для избежания конфликтов имен элементов и атрибутов.</p>
+                <pre><code class="language-xml">&lt;root xmlns:h="http://www.w3.org/TR/html4/"
+     xmlns:f="http://www.w3schools.com/furniture"&gt;
+  
+  &lt;h:table&gt;
+    &lt;h:tr&gt;
+      &lt;h:td&gt;Apples&lt;/h:td&gt;
+      &lt;h:td&gt;Bananas&lt;/h:td&gt;
+    &lt;/h:tr&gt;
+  &lt;/h:table&gt;
+  
+  &lt;f:table&gt;
+    &lt;f:name&gt;Coffee Table&lt;/f:name&gt;
+    &lt;f:width&gt;80&lt;/f:width&gt;
+  &lt;/f:table&gt;
+&lt;/root&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="title"><i class="fas fa-code"></i> XML Portal</h5>
+                    <p>Ресурс по изучению XML технологий и словарей</p>
+                </div>
+                <div class="col-6 u-text-right">
+                    <p>© 2025 XML и XML-словари. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <script src="js/script.js"></script>
+</body>
+</html>
